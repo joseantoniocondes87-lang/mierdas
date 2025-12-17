@@ -55,9 +55,12 @@ def calcular_promedio(numeros):
         
     Returns:
         float: Promedio de los números
+        
+    Raises:
+        ValueError: Si la lista está vacía
     """
     if not numeros:
-        return 0
+        raise ValueError("No se puede calcular el promedio de una lista vacía")
     return sum(numeros) / len(numeros)
 
 
